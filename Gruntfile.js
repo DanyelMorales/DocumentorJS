@@ -7,8 +7,9 @@
 * ----------------------------------------------
 * @author Daniel Vera <dvera at sunset.com.mx>
 */
-var gruntmodule = require('./doc/documentor/grunt.module.js');
-var apidocconfig = require('./apidoc.config.js');
+var gruntmodule = require('./lib/documentor/grunt.module.js');
+//var apidocconfig = require('./apidoc.config.js');
+var apidocconfig = require(process.cwd() + '/apidoc.config.js');
 
 var documentAutomation = gruntmodule(apidocconfig);
 

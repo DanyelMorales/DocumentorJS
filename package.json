@@ -4,6 +4,11 @@
   "description": "Utilidad para automatizar la compilación de documentación con apidocjs .",
   "main": "index.js",
   "author": "",
+  "bin": {
+	"documentorjs":"./bin/documentorjs.js"
+  },
+  "preferGlobal": "true",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
