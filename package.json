@@ -1,0 +1,20 @@
+{
+  "name": "documentorapidocjs",
+  "version": "1.0.0",
+  "description": "Utilidad para automatizar la compilación de documentación con apidocjs .",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+ 
+  },
+  "dependencies": {
+    "apidoc": "^0.17.6",
+	"grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^1.0.1"
+  }
+}
