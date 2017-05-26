@@ -10,15 +10,10 @@
 // COLLECTION OF CONFIG FOR SPECIFIC GROUP OF DOCUMENTATION
 var globalConfig = {
 	"configDir": "doc/apidoc/",
-	"outputDir": "./doc/apidoc/",
+	"outputDir": "doc/apidoc/",
 	"sourceDir": ["src/resourcesToDocument/"]
 };
 
-var plantillaDeEmail = {
-				"groupName":"emailplantillas", 
-				"regex":["**/Foo*.java", "**/*.js"],
-				"regexapidoc":["Foo.*\.java$", "Foo.*\.js$"]
-};
 
 var example1 = {
 				"sourceDir": ["src/resourcesToDocument/"],
