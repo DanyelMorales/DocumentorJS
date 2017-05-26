@@ -5,51 +5,51 @@
 * Add a New Grunt Watch and Grunt Exec for each DocGroup, 
 * to add the config vals add to configGroup the required inputs. 
 * ----------------------------------------------
-* @author Daniel Vera <dvera at sunset.com.mx>
+* @author Daniel Vera 
 */
 // COLLECTION OF CONFIG FOR SPECIFIC GROUP OF DOCUMENTATION
 var globalConfig = {
 	"configDir": "doc/apidoc/",
 	"outputDir": "./doc/apidoc/",
-	"sourceDir": ["src/main/java/com/m4sg/crm4marketingsunset/resources/"]
+	"sourceDir": ["src/resourcesToDocument/"]
 };
 
 var plantillaDeEmail = {
 				"groupName":"emailplantillas", 
-				"regex":["**/Email*.java", "**/*.js"],
-				"regexapidoc":["Email.*\.java$", "Email.*\.js$"]
+				"regex":["**/Foo*.java", "**/*.js"],
+				"regexapidoc":["Foo.*\.java$", "Foo.*\.js$"]
 };
 
-var sobreventa = {
-				"sourceDir": ["src/main/java/com/m4sg/crm4marketingsunset/"],
-				"groupName":"sobreventa", 
-				"regex":["/reservation/**/*.java", "**/*.js"],
-				"regexapidoc":["reservation\/.*\.java$"]
+var example1 = {
+				"sourceDir": ["src/resourcesToDocument/"],
+				"groupName":"example1", 
+				"regex":["/example1/**/*.java", "**/*.js"],
+				"regexapidoc":["example1\/.*\.java$"]
 };
 
-var compilado = {
-				"groupName":"CRM", 
-				"regex":["!**/Email*.java", "**/*.java"],
-				"regexapidoc":["!Email.*\.java$",".*\.java$"]
+var example2 = {
+				"groupName":"example2", 
+				"regex":["!**/example2*.java", "**/*.java"],
+				"regexapidoc":["!example2.*\.java$",".*\.java$"]
 };
 
-var hotel = {
-				"groupName":"hotel", 
-				"sourceDir": ["src/main/java/com/m4sg/crm4marketingsunset/"],
-				"regex":["**/Hotel*.java", "**/*.js"],
-				"regexapidoc":["Hotel.*\.java$", "Hotel.*\.js$"]
+var example3 = {
+				"groupName":"example3", 
+				"sourceDir": ["src/resourcesToDocument/"],
+				"regex":["**/example3*.java", "**/*.js"],
+				"regexapidoc":["example3.*\.java$", "example3.*\.js$"]
 };
 
-var cliente = {
-				"groupName":"cliente", 
-				"sourceDir": ["src/main/java/com/m4sg/crm4marketingsunset/"],
-				"regex":["**/Customer*.java", "**/*.js"],
-				"regexapidoc":["Customer.*\.java$", "Customer.*\.js$"]
+var example4 = {
+				"groupName":"example4", 
+				"sourceDir": ["src/resourcesToDocument/"],
+				"regex":["**/example4*.java", "**/*.js"],
+				"regexapidoc":["example4.*\.java$", "example4.*\.js$"]
 };
 
 var groups = {
 	"global": globalConfig, 
-	"groups": [plantillaDeEmail, sobreventa, hotel, cliente]
+	"groups": [example1,example2,example3,example4]
 };
 
 module.exports = groups; 
