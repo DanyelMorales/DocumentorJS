@@ -10,24 +10,25 @@
 const path = require('path'); 
 var gruntmodule = require('./lib/documentor/grunt.module.js');
 var configFile = "./apidoc.config.js";
-var pathOP = undefined;
+var pathOP = undefined; 
+var packagePath = 'package.json';
 
 // DOCUMENTOR EXPORT
 module.exports = function (grunt) {
 	
-	if(typeof grunt.option("extra")["configFile"] != "undefined")
+	if(typeof  grunt.option("extra") != "undefined" && 
+		typeof grunt.option("extra")["configFile"] != "undefined")
 	{
 		pathOP = grunt.option("extra")["invokedFrom"];
-		process.chdir(grunt.option("extra")["invokedFrom"]);
 		configFile = grunt.option("extra")["configFile"];
+		packagePath = grunt.option("extra")["packagePath"];
 	}
 	
 	var apidocconfig = require(configFile); 
-	apidocconfig["pathOP"] = pathOP;
-	var documentAutomation = gruntmodule(apidocconfig);
-    
+	var documentAutomation = gruntmodule(apidocconfig, pathOP);
+	
 	grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json')
+        pkg: grunt.file.readJSON(packagePath)
 		, exec: documentAutomation.getCommands()
         , watch: documentAutomation.getWatchers()
      });
