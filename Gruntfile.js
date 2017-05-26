@@ -16,12 +16,13 @@ var packagePath = 'package.json';
 // DOCUMENTOR EXPORT
 module.exports = function (grunt) {
 
-	if(typeof  grunt.option("extra") != "undefined" &&
-		typeof grunt.option("extra")["configFile"] != "undefined")
+	if(typeof  grunt.option("invokedFrom") != "undefined" &&
+		typeof grunt.option("configFile") != "undefined" &&
+		typeof grunt.option("packagePath") != "undefined")
 	{
-		pathOP = grunt.option("extra")["invokedFrom"];
-		configFile = grunt.option("extra")["configFile"];
-		packagePath = grunt.option("extra")["packagePath"];
+		pathOP = grunt.option("invokedFrom");
+		configFile = grunt.option("configFile");
+		packagePath = grunt.option("packagePath");
 	}
 
 	var apidocconfig = require(configFile);
@@ -29,11 +30,11 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
         pkg: grunt.file.readJSON(packagePath)
-		   , exec: documentAutomation.getCommands()
+		   , apidoc: documentAutomation.getApidocs()
       , watch: documentAutomation.getWatchers()
-     });
-
-	  grunt.registerTask('default', ["watch"]);
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-exec');
+  });
+	grunt.loadNpmTasks('grunt-apidoc');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-exec');
+	grunt.registerTask('default', ["watch"]);
 };
