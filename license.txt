@@ -1,0 +1,3 @@
+Estas apunto de instalar DocumentorJS(DKDoc) el cual automatiza la documentación de recursos REST. 
+
+Para mayor información porfavor lee el README.md del proyecto.
