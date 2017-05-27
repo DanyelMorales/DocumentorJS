@@ -1,0 +1,24 @@
+{
+  "name": "documentorapidocjs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Utilidad para automatizar la compilación de documentación con apidocjs .",
+  "main": "./lib/index.js",
+  "author": "",
+  "bin": {
+    "DKDoc": "./bin/DKDoc.js"
+  },
+  "preferGlobal": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "grunt": "^1.0.1",
+    "grunt-apidoc": "^0.11.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-exec": "^2.0.0"
+  },
+  "dependencies": {}
+}

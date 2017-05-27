@@ -1,0 +1,50 @@
+/**
+* APIDOCJS AUTO DOCUMENTOR.
+* ----------------------------------------------
+* This Grunt Module helps to document resources automagically.
+* Add a New Grunt Watch and Grunt Exec for each DocGroup, 
+* to add the config vals add to configGroup the required inputs. 
+* ----------------------------------------------
+* @author Daniel Vera 
+*/
+// COLLECTION OF CONFIG FOR SPECIFIC GROUP OF DOCUMENTATION
+var globalConfig = {
+	"configDir": "doc/apidoc/",
+	"outputDir": "doc/apidoc/",
+	"sourceDir": ["src/resourcesToDocument/"]
+};
+
+
+var example1 = {
+				"sourceDir": ["src/resourcesToDocument/"],
+				"groupName":"example1", 
+				"regex":["/example1/**/*.java", "**/*.js"],
+				"regexapidoc":["example1\/.*\.java$"]
+};
+
+var example2 = {
+				"groupName":"example2", 
+				"regex":["!**/example2*.java", "**/*.java"],
+				"regexapidoc":["!example2.*\.java$",".*\.java$"]
+};
+
+var example3 = {
+				"groupName":"example3", 
+				"sourceDir": ["src/resourcesToDocument/"],
+				"regex":["**/example3*.java", "**/*.js"],
+				"regexapidoc":["example3.*\.java$", "example3.*\.js$"]
+};
+
+var example4 = {
+				"groupName":"example4", 
+				"sourceDir": ["src/resourcesToDocument/"],
+				"regex":["**/example4*.java", "**/*.js"],
+				"regexapidoc":["example4.*\.java$", "example4.*\.js$"]
+};
+
+var groups = {
+	"global": globalConfig, 
+	"groups": [example1,example2,example3,example4]
+};
+
+module.exports = groups; 
