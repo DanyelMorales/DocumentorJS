@@ -3,10 +3,10 @@
 ; Compilar con Inno Setup: http://www.jrsoftware.org/isinfo.php
 ; @author Daniel Vera Morales
 
-#define MyAppName "DKDocumentorJS"
-#define MyAppAlias "DKDoc"
+#define MyAppName "documentorjs"
+#define MyAppAlias "documentorjs"
 #define MyAppVersion "1.0.0"
-#define MyAppPublisher "DK"
+#define MyAppPublisher "Daniel Morales"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
@@ -17,9 +17,9 @@ AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
-DefaultDirName={pf}\DKDocumentorJS
+DefaultDirName={pf}\documentorjs
 DisableDirPage=yes
-DefaultGroupName=DKDocumentorJS
+DefaultGroupName=documentorjs
 DisableProgramGroupPage=yes
 InfoBeforeFile=./license.txt
 OutputBaseFilename={#MyAppAlias}-{#MyAppVersion}
