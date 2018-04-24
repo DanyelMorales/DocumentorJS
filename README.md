@@ -1,4 +1,4 @@
-# DocumentorJS(DKDoc)
+# DocumentorJS(documentorjs)
 
 Esta utilidad permite monitorear los archivos que posean documentación consumible por el programa ApidocJS (http://apidocjs.com/) de modo que aquellas rutas con sus respectivas expresiones regulares deben ser contenidas en el archivo de configuración(apidoc.config.js).
 
@@ -8,7 +8,7 @@ Esta utilidad permite monitorear los archivos que posean documentación consumib
 
 **Usando el instalador**
 
-Una vez clonado el proyecto, se deberá ejecutar el script "bin/install.sh" el cual posee las instrucciones de instalación de las dependencias. Una vez instalado correctamente, el comando DKDoc estará ya disponible.
+Una vez clonado el proyecto, se deberá ejecutar el script "bin/install.sh" el cual posee las instrucciones de instalación de las dependencias. Una vez instalado correctamente, el comando documentorjs estará ya disponible.
 
 
 
@@ -113,9 +113,9 @@ module.exports = {
 
 
 
-### DKDoc
+### documentorjs
 
-El comando DKDoc deberá ser ejecutado donde se encuentre el archivo de configuración, esto iniciará el proceso de monitorización y generación automatica de acuerdo a las reglas del archivo de configuración.
+El comando documentorjs deberá ser ejecutado donde se encuentre el archivo de configuración, esto iniciará el proceso de monitorización y generación automatica de acuerdo a las reglas del archivo de configuración.
 
 ```
 proyecto/
